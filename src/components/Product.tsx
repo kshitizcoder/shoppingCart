@@ -34,7 +34,7 @@ const Product: React.FC = () => {
                 {prod?.title.length > 30 ? subtitle : prod.title}
               </h2>
               <div className="mt-5 flex justify-around">
-                <button className="bg-black text-white px-4 md:px-8 py-1 mr-4  font-medium hover:bg-white hover:text-black transition duration-300 ease-linear">
+                <button className="bg-blue-800 text-white px-4 md:px-8 py-1 mr-4  font-medium hover:bg-white hover:text-black transition duration-300 ease-linear">
                   <Link to={`/details/${prod.id}`}>See Details</Link>{" "}
                 </button>
                 <button
