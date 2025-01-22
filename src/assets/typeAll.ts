@@ -12,4 +12,5 @@ export type Product = {
 };
 export type initalStatetype = {
   productInCart: Product[];
+  message: string;
 };

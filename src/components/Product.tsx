@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { Product as productType } from "../assets/typeAll";
 import { useDispatch } from "react-redux";
 import { addProductToCart } from "../redux/addToCartSlice";
+import { useAppSelector } from "../redux/hooks";
 
 const Product: React.FC = () => {
   const { data, isLoading } = useGetAllProductQuery();
+
   const dispatch = useDispatch();
   console.log(data);
   const handleAddToCart = (prod: productType) => {
@@ -33,7 +35,7 @@ const Product: React.FC = () => {
                 {prod?.title.length > 30 ? subtitle : prod.title}
               </h2>
               <div className="mt-5 flex justify-around">
-                <button className="bg-blue-800 text-white px-4 md:px-8 py-1 mr-4  font-medium hover:bg-white hover:text-black transition duration-300 ease-linear">
+                <button className="bg-red-800 text-white px-4 md:px-8 py-1 mr-4  font-medium hover:bg-white hover:text-black transition duration-300 ease-linear">
                   <Link to={`/details/${prod.id}`}>See Details</Link>{" "}
                 </button>
                 <button

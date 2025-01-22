@@ -3,6 +3,7 @@ import { initalStatetype, Product } from "./../assets/typeAll";
 
 const initialState: initalStatetype = {
   productInCart: [],
+  message: "",
 };
 
 export const addToCartSlice = createSlice({
@@ -15,12 +16,14 @@ export const addToCartSlice = createSlice({
       );
       if (!productExists) {
         state.productInCart.push(action.payload);
+      } else {
       }
     },
     deletProductFromCart: (state, action: PayloadAction<number>) => {
       let product = state.productInCart.filter(
         (pro) => pro.id != action.payload
       );
+
       state.productInCart = product;
     },
   },
