@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Product as productType } from "../assets/typeAll";
 import { useDispatch } from "react-redux";
 import { addProductToCart } from "../redux/addToCartSlice";
-import { useAppSelector } from "../redux/hooks";
 
 const Product: React.FC = () => {
   const { data, isLoading } = useGetAllProductQuery();
